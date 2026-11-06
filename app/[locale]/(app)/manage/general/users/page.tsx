@@ -796,7 +796,7 @@ export default function UserAccountsPage() {
                                 </Heading>
                                 <p className="text-sm text-tertiary">{confirmMessage}</p>
                                 <div className="flex justify-end gap-3">
-                                    <Button color="secondary" onPress={closeDialog} isDisabled={actionMutation.isPending}>
+                                    <Button color="secondary" onPress={() => closeDialog()} isDisabled={actionMutation.isPending}>
                                         {t("cancel")}
                                     </Button>
                                     <Button
@@ -857,7 +857,7 @@ export default function UserAccountsPage() {
                                     )}
                                 />
                                 <div className="flex justify-end gap-3">
-                                    <Button color="secondary" onPress={closeDialog} isDisabled={resetMutation.isPending}>
+                                    <Button color="secondary" onPress={() => closeDialog()} isDisabled={resetMutation.isPending}>
                                         {t("cancel")}
                                     </Button>
                                     <Button type="submit" isLoading={resetMutation.isPending}>
@@ -917,7 +917,7 @@ export default function UserAccountsPage() {
                                     )}
                                 />
                                 <div className="flex justify-end gap-3">
-                                    <Button color="secondary" onPress={closeDialog} isDisabled={userMutation.isPending}>
+                                    <Button color="secondary" onPress={() => closeDialog()} isDisabled={userMutation.isPending}>
                                         {t("cancel")}
                                     </Button>
                                     <Button type="submit" isLoading={userMutation.isPending}>
